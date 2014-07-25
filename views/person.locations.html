@@ -1,1 +1,1 @@
-<div> <div class="container"> <google-map center="map.center" zoom="map.zoom"> <marker coords="{latitude: -27, longitude: 153}"> </marker> </google-map> </div> </div>
+<div> <div class="container"> <google-map center="map.center" zoom="map.zoom" draggable> <marker coords="place" ng-repeat="place in ellwood.placesWithPhotos"> <window templateparameter="place"> <div> <p> {{ place.media.caption || place.name }} </p> <p> <img src="images/{{ place.media.img }}" alt="" style="height: 100px"> </p> </div> </window> </marker> </google-map> </div> </div>
