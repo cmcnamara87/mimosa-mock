@@ -1,27 +1,70 @@
 <div>
     <div class="container">
-        <div ng-bind-html="ellwood.bio.biography">
+        <div class="btn-toolbar" role="toolbar">
+            <div class="btn-group">
+                <button class="btn btn-default"><i class="glyphicon glyphicon-pencil"></i> Edit</button>
+            </div>
         </div>
-        <div>
-            born {{ ellwood.bio.born }}
-        </div>
-        <div>
-            death {{ ellwood.bio.death }}
-        </div>
-        <div>
-            married {{ ellwood.bio.married }}
-        </div>
-        <div>
-            children {{ ellwood.bio.children }}
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div ng-bind-html="ellwood.bio.biography">
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h2 style="text-align: center; font-size: 20px; margin-top: 0;">{{ ellwood.bio.name }}</h2>
+                        <div style="text-align: center;">
+                            <img ng-src="{{ ellwood.bio.photographs[0].img }}" alt="" style="max-height: 300px;">
+                        </div>
+                        <dl class="dl-horizontal" style="margin-top: 20px;">
+                            <dt>Born</dt>
+                            <dd>
+                                {{ ellwood.bio.born.date}}
+                                <br/>
+                                <a href="">
+                            {{ ellwood.bio.born.place}}
+                        </a>
+                            </dd>
+                            <dt>
+                                Death
+                            </dt>
+                            <dd>
+                                {{ ellwood.bio.death.date}}
+                                <br/>
+                                <a href="">
+                            {{ ellwood.bio.death.place}}
+                        </a>
+                            </dd>
+                            <dt>
+                                Spouse
+                            </dt>
+                            <dd>
+                                <a href="">{{ ellwood.bio.married.spouse }}</a>
+                                <span class="text-muted">
+                                    <br/>Married: {{ ellwood.bio.married.date}} {{ ellwood.bio.married.place}})
+                                </span>
+                            </dd>
+                            <dt>Children</dt>
+                            <dd>
+                                <div ng-repeat="child in ellwood.bio.children" style="margin-bottom: 5px;">
+                                    <a href="">{{ child.name }}</a> ({{ child.born.date }} - {{ child.death.date || 'Present' }})
+                                    <span ng-show="child.married" class="text-muted">
+                                        <br/>Spouse: {{ child.married.spouse }}
+                                        <br/>Married: {{ child.married.date}}</span>
+                                    <br/>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+
+            </div>
         </div>
     </div>
-
-    <pre>
-	    			{{ ellwood.bio | json }}
-	    		</pre>
-
-
-
-
-
 </div>

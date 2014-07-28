@@ -10,11 +10,13 @@
 
     <div class="container">
         <ul class="nav nav-tabs" role="tablist">
-            <li ui-sref-active="active"><a ui-sref="person.bio">Biography</a>
+            <li ui-sref-active="active"><a ui-sref="person.bio">Summary</a>
             </li>
-            <li ui-sref-active="active"><a ui-sref="person.photographs">Photographs</a>
+            <li ui-sref-active="active"><a ui-sref="person.photographs">Photographs <span class="badge badge-tab">{{ ellwood.bio.photographs.length }}</span></a>
             </li>
-            <li><a href="#">Messages</a>
+            <li ui-sref-active="active"><a ui-sref="person.locations">Locations <span class="badge badge-tab">{{ ellwood.placesWithPhotos.length }}</span></a>
+            </li>
+            <li ui-sref-active="active"><a ui-sref="person.timeline">Timeline</a>
             </li>
         </ul>
 

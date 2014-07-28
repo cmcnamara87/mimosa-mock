@@ -191,7 +191,7 @@ angular.module('anzacMockupApp')
                 'state': 'QLD',
                 'name': 'Kingaroy',
                 'media': {
-                    'img': 'Ellwood_uniform.jpg',
+                    'img': 'images/Ellwood_uniform.jpg',
                     'caption': '1914 - Lt. Bob Ellwood’s photograph in The Queenslander'
                 },
                 'longitude': '151.837295532',
@@ -200,7 +200,7 @@ angular.module('anzacMockupApp')
                 'state': 'QLD',
                 'name': 'Maryborough',
                 'media': {
-                    'img': 'Ellwood_child.jpg',
+                    'img': 'images/Ellwood_child.jpg',
                     'caption': '15 October 1894 - Robert Edward Ellwood born.<br/>c.1896 – Bob Ellwood and his older brother John (Jack)'
                 },
                 'longitude': '152.701889038',
@@ -209,21 +209,16 @@ angular.module('anzacMockupApp')
                 'state': 'QLD',
                 'name': 'Memerambi',
                 'media': {
-                    'img': 'Ellwood.jpg',
+                    'img': 'images/Ellwood.jpg',
                     'caption': 'c. 1980 - Bob Ellwood (aged 85) photographed at ‘Tahiti’ Memerambi.'
                 },
                 'longitude': '151.8167',
                 'latitude': '-26.4500'
             }, {
                 'state': 'QLD',
-                'name': 'Queen St, Brisbane',
-                'longitude': '153.0274',
-                'latitude': '-27.4680'
-            }, {
-                'state': 'QLD',
                 'name': 'Albert St Methodist Church, Brisbane',
                 'media': {
-                    'img': 'AlbertSt.jpg',
+                    'img': 'images/AlbertSt.jpg',
                     'caption': '1 October 1921 - Robert Edward Ellwood married Doris Jane McNicol at Albert St Methodist Church, Brisbane'
                 },
                 'longitude': '153.023876',
@@ -259,15 +254,15 @@ angular.module('anzacMockupApp')
                 'name': 'Robert Edward Ellwood',
                 'biography': '<p>The author remembers him with much affection and as an intelligent and learned man; a ‘self-made man’ with strong principles and views but always willing to engage in mutually beneficial conversation.  He had high expectations of himself and of others and took pleasure in recalling and recounting stories of his early life and family.</p><p>He possessed a strong sense of duty and exercised strong self-discipline all his life.  Anecdotally, this may have been in response to what he saw as his own father’s profligate life.  JD Ellwood was not a good role model.</p><p>Bob Ellwood was determined to not follow in those footsteps.</p><p>He was an Army man all his life.  In 1907, he was a member of the school cadets; he enlisted in the 2nd Light Horse Regiment in 1914 and in 1941, joined the 5th Australian Motor Regiment, previously the 5th Light Horse Regiment.</p><p>Bob Ellwood’s children have many stories of their father’s iron will and how his expectations manifested themselves. Pat Reed remembers being a little afraid of him; of having to polish 6 pairs of shoes every weekend and her fear and pain if they weren’t up to his exacting standards.  Of having to push the Hudson Terraplane out of the garage to dust it inside and out and checking the oil and petrol before the Saturday morning trip into town. Alan and June Ellwood remember how tough he could be as they farmed at ‘Tahiti’.  They were essentially his sharefarmers and he had as much of a commercial arrangement with them as anything else and he expected payment of rent and income on time and in full.  Within these arrangements, family relationships and considerations were not always the first priority.  Perhaps he was being tough to be kind? Nevertheless, in the 1970s, Bob Ellwood transferred the title of portion 337 at Memerambi without cost to Alan and June Ellwood in recognition of their hard work and the costly improvements made over the previous 25 years.</p><p>He returned from WW1 with a considerable collection of Middle Eastern brassware that adorned the family home all his life. He was a civic minded man.  This was demonstrated by his membership of the Kingaroy Shire Council 1930-1936, his lifetime membership of the Kingaroy RSL, and his membership of the Kingaroy Hospital Committee.  He nominated for the plebiscite for the national party seat of Nanango in 1947 and was beaten by Johannes  Bjelke-Peterson. He was a keen fisherman and lawn bowler.  He was a member of the Kingaroy Bowls Club, Kingaroy Golf Club and the Bongaree Bowls Club on Bribie Island.</p>',
                 'photographs': [{
-                    'img': 'Ellwood.jpg',
+                    'img': 'images/Ellwood.jpg',
                     'caption': 'c. 1980 - Bob Ellwood (aged 85) photographed at ‘Tahiti’ Memerambi.',
                     'place': 'Memerambi'
                 }, {
-                    'img': 'Ellwood_uniform.jpg',
+                    'img': 'images/Ellwood_uniform.jpg',
                     'caption': '1914 - Lt. Bob Ellwood’s photograph in The Queenslander',
                     'place': 'Kingaroy'
                 }, {
-                    'img': 'Ellwood_child.jpg',
+                    'img': 'images/Ellwood_child.jpg',
                     'caption': 'c.1896 – Bob Ellwood and his older brother John (Jack)',
                     'place': 'Maryborough'
                 }],

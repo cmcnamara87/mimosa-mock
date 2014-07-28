@@ -12,13 +12,17 @@ angular
     .module('anzacMockupApp', [
         'ngAnimate',
         'ui.router',
-        'ngSanitize'
+        'ngSanitize',
+        'google-maps',
+        'pippTimelineDirectives',
+        'ui.select2'
     ]).run(function($rootScope, ellwood) {
         $rootScope.ellwood = ellwood;
     }).config(function($stateProvider, $urlRouterProvider) {
 
         // For any unmatched url, redirect to /state1
         $urlRouterProvider.otherwise('/person/1/bio');
+
 
         // Now set up the states
         $stateProvider
@@ -33,7 +37,61 @@ angular
             })
             .state('person.photographs', {
                 url: '/photographs',
-                templateUrl: 'views/person.photographs.html'
+                templateUrl: 'views/person.photographs.html',
+                controller: ['$scope', 'ellwood',
+                    function($scope, ellwood) {
+                        console.log('yell', ellwood);
+                        $scope.isUploading = false;
+
+                        $scope.uploadBegin = function() {
+                            $scope.isUploading = true;
+                        };
+                        $scope.uploadEnd = function() {
+                            $scope.isUploading = false;
+                        };
+                        $scope.upload = function(photo) {
+                            // Add it to bio
+                            photo.img = photo.files[0];
+                            photo.isUploaded = true;
+
+                            ellwood.bio.photographs.push(photo);
+
+                            // add it to photo with places
+                            var placeWithPhoto = angular.copy(_.findWhere(ellwood.places, {
+                                name: photo.place
+                            }));
+                            placeWithPhoto.media = {
+                                img: photo.files[0],
+                                caption: photo.caption
+                            };
+                            ellwood.placesWithPhotos.unshift(placeWithPhoto);
+                            $scope.photo = {};
+                        };
+                    }
+                ]
+            })
+            .state('person.locations', {
+                url: '/locations',
+                templateUrl: 'views/person.locations.html',
+                controller: ['$scope',
+                    function($scope) {
+                        $scope.map = {
+                            center: {
+                                latitude: -27,
+                                longitude: 153
+                            },
+                            zoom: 8
+                        };
+                    }
+                ]
+            })
+            .state('person.timeline', {
+                url: '/timeline',
+                templateUrl: 'views/person.timeline.html'
+            })
+            .state('upload', {
+                url: '/upload',
+                templateUrl: 'views/upload.html'
             });
     });
 
